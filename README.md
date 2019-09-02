@@ -8,6 +8,9 @@
   - [Table of Contents](#table-of-contents)
   - [Requirements](#requirements)
   - [Dependencies](#dependencies)
+  - [Usage](#usage)
+    - [Module Variables](#module-variables)
+    - [Module Outputs](#module-outputs)
   - [Author Information](#author-information)
   - [License](#license)
 
@@ -18,6 +21,30 @@ This module requires Terraform version `0.12.0` or newer.
 ## Dependencies
 
 This module depends on a correctly configured [AWS Provider](https://www.terraform.io/docs/providers/aws/index.html) in your Terraform codebase.
+
+## Usage
+
+Add the module to your Terraform resources like so:
+
+```hcl
+module "simple-example" {
+  source  = "operatehappy/s3-bucket/aws"
+  version = "1.0.0"
+
+  name = "oh-demo-simple-example"
+
+  tags = {
+    Department = "Operations"
+  }
+
+  force_destroy = true
+
+  create_readme = false
+}
+
+```
+
+Then, fetch the module from the [Terraform Registry](https://registry.terraform.io/modules/operatehappy/s3-bucket) using `terraform get`.
 
 ### Module Outputs
 
