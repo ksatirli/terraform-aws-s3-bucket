@@ -15,7 +15,6 @@ locals {
   // thereby allowing Terraform to set the `bucket_name`
   bucket_prefix = var.use_prefix ? var.name : null
 
-  // if `policy` is set, render using the file function,
   policy = var.policy != null ? var.policy : null
 
   tags = local.merged_tags != null ? local.merged_tags : null
