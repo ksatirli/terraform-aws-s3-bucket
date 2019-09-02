@@ -17,8 +17,4 @@ locals {
   bucket_prefix = var.use_prefix ? var.name : null
 
   policy = var.policy != null ? var.policy : null
-
-  tags = local.merged_tags != null ? local.merged_tags : null
-
-  region = var.region != null ? var.region : null
 }

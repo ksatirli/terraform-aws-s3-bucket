@@ -3,7 +3,7 @@ resource "aws_s3_bucket" "bucket" {
   bucket_prefix = local.bucket_prefix
   acl           = var.acl
   policy        = local.policy
-  tags          = local.tags
+  tags          = local.merged_tags
   force_destroy = var.force_destroy
 
   dynamic "website" {
@@ -102,7 +102,7 @@ resource "aws_s3_bucket" "bucket" {
 
   acceleration_status = var.acceleration_status
 
-  region = local.region
+  region = var.region
 
   request_payer = var.request_payer
 
