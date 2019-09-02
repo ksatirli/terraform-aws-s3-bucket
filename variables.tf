@@ -65,7 +65,7 @@ variable "logging" {
 }
 
 variable "lifecycle_rule" {
-  type        = "list"
+  type        = list
   description = "Map of Lifecycle Rule configuration of S3 Bucket"
   default     = []
 }
