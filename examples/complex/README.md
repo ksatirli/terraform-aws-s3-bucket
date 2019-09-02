@@ -23,8 +23,8 @@ A _complex_ configuration of the `terraform-aws-s3-bucket` Module could look lik
 module "complex-example-target" {
   source  = "operatehappy/s3-bucket/aws"
   version = "1.0.0"
-  name   = "oh-demos-complex-example-target"
-  acl    = "log-delivery-write"
+  name    = "oh-demos-complex-example-target"
+  acl     = "log-delivery-write"
 
   server_side_encryption_configuration = [{
     kms_master_key_id = "alias/oh-demos"
@@ -36,7 +36,7 @@ module "complex-example" {
   source  = "operatehappy/s3-bucket/aws"
   version = "1.0.0"
 
-  name   = "oh-demos-complex-example"
+  name = "oh-demos-complex-example"
 
   tags = {
     Department = "Operations"
