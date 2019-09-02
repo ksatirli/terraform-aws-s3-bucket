@@ -1,0 +1,32 @@
+fail_fast: true
+repos:
+  -
+    repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v2.3.0
+    hooks:
+      - id: check-added-large-files
+      - id: check-case-conflict
+      - id: check-merge-conflict
+      - id: check-json
+      - id: check-yaml
+      - id: detect-aws-credentials
+        args: ["--allow-missing-credentials"]
+      - id: check-vcs-permalinks
+  -
+    repo: https://github.com/jumanjihouse/pre-commit-hooks
+    rev: 1.11.0
+    hooks:
+      - id: require-ascii
+      - id: shellcheck
+  -
+    repo: https://github.com/igorshubovych/markdownlint-cli
+    rev: v0.18.0
+    hooks:
+      -
+        id: markdownlint
+        args: ["--config=.mdlrc"]
+  -
+    repo: https://github.com/antonbabenko/pre-commit-terraform
+    rev: v1.19.0
+    hooks:
+      - id: terraform_fmt
