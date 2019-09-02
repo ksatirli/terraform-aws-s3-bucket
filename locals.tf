@@ -3,6 +3,7 @@ locals {
     TerraformManaged   = true
     TerraformWorkspace = terraform.workspace
   }
+
   // if `use_default_tags` is set to `true`, merge `tags` with `default_tags`
   // otherwise, use user-supplied `tags` mapping
   merged_tags = var.use_default_tags ? merge(var.tags, local.default_tags) : var.tags
