@@ -1,103 +1,103 @@
 variable "name" {
   type        = string
-  description = "TODO"
+  description = "Name of S3 Bucket"
 }
 
 variable "use_prefix" {
   type        = bool
-  description = "TODO"
+  description = "Toggle to use randomly-generated Prefix for Bucket Name"
   default     = false
 }
 
 variable "acl" {
   type        = string
-  description = "TODO"
+  description = "Canned ACL of S3 Bucket"
   default     = "private"
 }
 
 variable "policy" {
   type        = string
-  description = "TODO"
+  description = "Policy (JSON) Document of S3 Bucket"
   default     = null
 }
 
 variable "use_default_tags" {
   type        = bool
-  description = "TODO"
+  description = "Toggle to enable creation of default tags, containing Terraform Workspace identifier"
   default     = true
 }
 
 variable "tags" {
   type        = map
-  description = "TODO"
+  description = "Mapping of Tags of S3 Bucket"
   default     = {}
 }
 
 variable "force_destroy" {
   type        = bool
-  description = "TODO"
+  description = "Toggle to enable force-destruction of S3 Bucket"
   default     = false
 }
 
 variable "website" {
   type        = map(string)
-  description = "TODO"
+  description = "Map of Website configuration of S3 Bucket"
   default     = {}
 }
 
 variable "cors_rule" {
   // NOTE: change to `map(any)` once supported
   type        = any
-  description = "TODO"
+  description = "Map of CORS Rules of S3 Bucket"
   default     = {}
 }
 
 variable "versioning" {
   type        = map(string)
-  description = "TODO"
+  description = "Map of Versionining configuration of S3 Bucket"
   default     = {}
 }
 
 variable "logging" {
   type        = map(string)
-  description = "TODO"
+  description = "Map of Logging configuration of S3 Bucket"
   default     = {}
 }
 
 variable "lifecycle_rule" {
   type        = "list"
-  description = "TODO"
+  description = "Map of Lifecycle Rule configuration of S3 Bucket"
   default     = []
 }
 
 variable "acceleration_status" {
   type        = string
-  description = "TODO"
+  description = "Acceleration Status of S3 Bucket"
   default     = "Suspended"
 }
 
 variable "request_payer" {
   type        = string
-  description = "TODO"
+  description = "Identifier for Request Cost-allocation of S3 Bucket"
   default     = "BucketOwner"
 }
 
 variable "region" {
   type        = string
-  description = "TODO"
+  description = "Region of S3 Bucket"
   default     = null
 }
 
 variable "server_side_encryption_configuration" {
   type        = map
-  description = "TODO"
+  description = "Server-side Encryption (SSE) Configuration of S3 Bucket"
   default     = {}
 }
 
 variable "object_lock_configuration" {
   // NOTE: change to `map(any)` once supported
   type        = any
-  description = "TODO"
+  description = "Object-lock Configuration of S3 Bucket"
   default     = {}
 }
 
