@@ -19,6 +19,18 @@ This module requires Terraform version `0.12.0` or newer.
 
 This module depends on a correctly configured [AWS Provider](https://www.terraform.io/docs/providers/aws/index.html) in your Terraform codebase.
 
+### Module Outputs
+
+Available outputs are listed below, along with their description
+
+| output          | description                                                         |
+|-----------------|---------------------------------------------------------------------|
+| `default_tags`  | default tags containing Terraform Workspace identifier              |
+| `merged_tags`   | merged value of `var.tags` and `local.default_tags` _or_ `var.tags` |
+| `name`          | value of `var.name` or `null`                                       |
+| `bucket_prefix` | value of `var.name` or `null`                                       |
+| `policy`        | value of `var.policy` or `null`                                     |
+
 ## Author Information
 
 This module is currently maintained by the individuals listed below.
