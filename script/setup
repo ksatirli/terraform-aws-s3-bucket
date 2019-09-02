@@ -1,0 +1,19 @@
+#!/bin/sh
+
+# script/update: Update application to run for its current checkout.
+
+set -o errexit; set -o nounset
+
+cd "$(dirname "$0")/.."
+
+if [ -f ".pre-commit-config.yaml" ]; then
+  echo "==> Installing pre-commit dependencies..."
+  pre-commit install
+fi
+
+echo
+
+if ls ./*.tf 1> /dev/null 2>&1; then
+  echo "==> Installing Terraform Providers dependencies..."
+  terraform init
+fi

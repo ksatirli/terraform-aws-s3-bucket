@@ -1,0 +1,10 @@
+#!/bin/sh
+
+# script/test: Run test suite for application.
+
+cd "$(dirname "$0")/.." || exit
+
+if [ -f ".pre-commit-config.yaml" ]; then
+  echo "==> Running pre-commit checks..."
+  pre-commit run --all-files
+fi
