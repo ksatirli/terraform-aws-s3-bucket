@@ -108,6 +108,38 @@ resource "aws_s3_bucket" "bucket" {
 
   // replication_configuration will be added in a future release
 
+  dynamic "server_side_encryption_configuration" {
+    for_each = length(var.server_side_encryption_configuration) != 0 ? [var.server_side_encryption_configuration] : []
+
+    content {
+      rule {
+        apply_server_side_encryption_by_default {
+          kms_master_key_id = lookup(server_side_encryption_configuration.value, "kms_master_key_id", null)
+          sse_algorithm     = lookup(server_side_encryption_configuration.value, "sse_algorithm", null)
+        }
+      }
+    }
+  }
+
+  dynamic "object_lock_configuration" {
+    for_each = length(var.object_lock_configuration) != 0 ? [var.object_lock_configuration] : []
+
+    content {
+      object_lock_enabled = lookup(object_lock_configuration.value, "object_lock_enabled", null)
+
+      dynamic "rule" {
+        for_each = length(var.object_lock_configuration.rule) != 0 ? [var.object_lock_configuration.rule] : []
+
+        content {
+          default_retention {
+            mode  = lookup(rule.value.default_retention, "mode", null)
+            days  = lookup(rule.value.default_retention, "days", null)
+            years = lookup(rule.value.default_retention, "years", null)
+          }
+        }
+      }
+    }
+  }
 }
 
 resource "aws_s3_bucket_object" "readme" {
