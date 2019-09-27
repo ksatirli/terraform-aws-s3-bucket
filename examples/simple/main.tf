@@ -2,7 +2,7 @@ module "simple-example" {
   source  = "operatehappy/s3-bucket/aws"
   version = "1.0.0"
 
-  name = "oh-demo-simple-example"
+  name = "oh-demos-simple-example"
 
   tags = {
     Department = "Operations"

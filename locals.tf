@@ -15,6 +15,4 @@ locals {
   // if `use_prefix` is set to `false`, set `bucket_prefix` to `null`
   // thereby allowing Terraform to set the `bucket_name`
   bucket_prefix = var.use_prefix ? var.name : null
-
-  policy = var.policy != null ? var.policy : null
 }

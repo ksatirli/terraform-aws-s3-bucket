@@ -2,7 +2,7 @@ resource "aws_s3_bucket" "bucket" {
   bucket        = local.name
   bucket_prefix = local.bucket_prefix
   acl           = var.acl
-  policy        = local.policy
+  policy        = var.policy != null ? var.policy : null
   tags          = local.merged_tags
   force_destroy = var.force_destroy
 
