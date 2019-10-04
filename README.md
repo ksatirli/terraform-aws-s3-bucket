@@ -45,7 +45,7 @@ module "simple-example" {
 
 Then, fetch the module from the [Terraform Registry](https://registry.terraform.io/modules/operatehappy/s3-bucket) using `terraform get`.
 
-Additional usage examples are avaialble in the `examples` directory via [GitHub](https://github.com/operatehappy/terraform-aws-s3-bucket/tree/master/examples).
+Additional usage examples are avaialble in the `examples` directory via [GitHub](https://github.com/operatehappy/terraform-aws-s3-buckets/tree/master/examples).
 
 ### Module Variables
 
