@@ -4,9 +4,11 @@
 
 set -o errexit; set -o nounset
 
+PRECOMMIT_CONFIG="../dotfiles-org/.pre-commit-config.yaml"
+
 cd "$(dirname "$0")/.."
 
-if [ -f ".pre-commit-config.yaml" ]; then
+if [ -f "$(PRECOMMIT_CONFIG)" ]; then
   echo "==> Removing current pre-commit installation..."
   pre-commit uninstall
 
