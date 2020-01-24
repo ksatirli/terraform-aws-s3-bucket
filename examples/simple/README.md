@@ -21,7 +21,7 @@ A _simple_ configuration of the `terraform-aws-s3-bucket` Module could look like
 ```hcl
 module "simple-example" {
   source  = "operatehappy/s3-bucket/aws"
-  version = "1.0.0"
+  version = "1.1.0"
 
   name = "oh-demo-simple-example"
 

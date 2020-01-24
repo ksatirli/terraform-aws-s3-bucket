@@ -21,7 +21,7 @@ A _website_ configuration of the `terraform-aws-s3-bucket` Module could look lik
 ```hcl
 module "website-example" {
   source  = "operatehappy/s3-bucket/aws"
-  version = "1.0.0"
+  version = "1.1.0"
 
   name   = "oh-demos-website-example"
 
