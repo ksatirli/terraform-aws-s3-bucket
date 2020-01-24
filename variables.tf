@@ -73,7 +73,7 @@ variable "lifecycle_rule" {
 variable "acceleration_status" {
   type        = string
   description = "Acceleration Status of S3 Bucket"
-  default     = "Suspended"
+  default     = null
 }
 
 variable "request_payer" {

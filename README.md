@@ -65,7 +65,7 @@ Available variables are listed below, along with their default values:
 | `versioning`                           | `map(string)` | Map of Versionining configuration of S3 Bucket                                       | `{}`            |
 | `logging`                              | `map(string)` | Map of Logging configuration of S3 Bucket                                            | `{}`            |
 | `lifecycle_rule`                       | `list`        | Map of Lifecycle Rule configuration of S3 Bucket                                     | `[]`            |
-| `acceleration_status`                  | `string`      | Acceleration Status of S3 Bucket                                                     | `"Suspended"`   |
+| `acceleration_status`                  | `string`      | Acceleration Status of S3 Bucket                                                     | `null`          |
 | `request_payer`                        | `string`      | Identifier for Request Cost-allocation of S3 Bucket                                  | `"BucketOwner"` |
 | `region`                               | `string`      | Region of S3 Bucket                                                                  | `null`          |
 | `server_side_encryption_configuration` | `map`         | Server-side Encryption (SSE) Configuration of S3 Bucket                              | `{}`            |
