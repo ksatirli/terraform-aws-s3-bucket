@@ -4,9 +4,11 @@
 
 set -o errexit; set -o nounset
 
+PRECOMMIT_CONFIG="../dotfiles-org/.pre-commit-config.yaml"
+
 cd "$(dirname "$0")/.."
 
-if [ -f "./.pre-commit-config.yaml" ] && [ "$(uname -s)" = "Darwin" ]; then
+if [ -f "${PRECOMMIT_CONFIG}" ] && [ "$(uname -s)" = "Darwin" ]; then
   if ! brew list -1 | grep -q '^pre-commit$'; then
     echo "==> Installing pre-commit with Homebrew..."
     brew install pre-commit
