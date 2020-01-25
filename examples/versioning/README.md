@@ -21,7 +21,7 @@ A _versioning_ configuration of the `terraform-aws-s3-bucket` Module could look 
 ```hcl
 module "versioning-example" {
   source  = "operatehappy/s3-bucket/aws"
-  version = "1.1.0"
+  version = "1.1.1"
 
   name   = "oh-demos-versioning-example"
 
