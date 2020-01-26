@@ -1,4 +1,4 @@
-# Terraform Module: AWS S3 Bucket DNS Records
+# Terraform Module: AWS S3 Bucket
 
 > This repository is a [Terraform](https://terraform.io/) Module for managing AWS [S3 Buckets](https://docs.aws.amazon.com/AmazonS3/latest/dev/UsingBucket.html).
 
