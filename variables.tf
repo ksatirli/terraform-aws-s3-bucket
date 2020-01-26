@@ -112,3 +112,22 @@ variable "readme_additions" {
   description = "Additional content (e.g.: information, instructions) to add to README.md"
   default     = ""
 }
+
+locals {
+  default_tags = {
+    TerraformManaged   = true
+    TerraformWorkspace = terraform.workspace
+  }
+
+  // if `use_default_tags` is set to `true`, merge `tags` with `default_tags`
+  // otherwise, use user-supplied `tags` mapping
+  merged_tags = var.use_default_tags ? merge(var.tags, local.default_tags) : var.tags
+
+  // if `use_prefix` is set to `true`, set `bucket_name` to `null`
+  // thereby allowing Terraform to set the `bucket_prefix`
+  name = var.use_prefix ? null : var.name
+
+  // if `use_prefix` is set to `false`, set `bucket_prefix` to `null`
+  // thereby allowing Terraform to set the `bucket_name`
+  bucket_prefix = var.use_prefix ? var.name : null
+}
