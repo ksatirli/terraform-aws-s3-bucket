@@ -6,6 +6,7 @@
 
 - [Terraform Module: AWS S3 Bucket DNS Records](#terraform-module-aws-s3-bucket-dns-records)
   - [Table of Contents](#table-of-contents)
+  - [Overview](#overview)
   - [Requirements](#requirements)
   - [Dependencies](#dependencies)
   - [Usage](#usage)
@@ -13,6 +14,10 @@
     - [Module Outputs](#module-outputs)
   - [Author Information](#author-information)
   - [License](#license)
+
+## Overview
+
+![Terraform Module: AWS S3 Bucket](./overview.png "Terraform Module: AWS S3 Bucket")
 
 ## Requirements
 
