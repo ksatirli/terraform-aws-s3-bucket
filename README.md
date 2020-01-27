@@ -1,4 +1,4 @@
-# Terraform Module: AWS S3 Bucket DNS Records
+# Terraform Module: AWS S3 Bucket
 
 > This repository is a [Terraform](https://terraform.io/) Module for managing AWS [S3 Buckets](https://docs.aws.amazon.com/AmazonS3/latest/dev/UsingBucket.html).
 
@@ -6,6 +6,7 @@
 
 - [Terraform Module: AWS S3 Bucket DNS Records](#terraform-module-aws-s3-bucket-dns-records)
   - [Table of Contents](#table-of-contents)
+  - [Overview](#overview)
   - [Requirements](#requirements)
   - [Dependencies](#dependencies)
   - [Usage](#usage)
@@ -13,6 +14,10 @@
     - [Module Outputs](#module-outputs)
   - [Author Information](#author-information)
   - [License](#license)
+
+## Overview
+
+![Terraform Module: AWS S3 Bucket](./overview.png "Terraform Module: AWS S3 Bucket")
 
 ## Requirements
 
@@ -29,7 +34,7 @@ Add the module to your Terraform resources like so:
 ```hcl
 module "simple-example" {
   source  = "operatehappy/s3-bucket/aws"
-  version = "1.1.0"
+  version = "1.1.1"
 
   name = "oh-demo-simple-example"
 
@@ -45,7 +50,7 @@ module "simple-example" {
 
 Then, fetch the module from the [Terraform Registry](https://registry.terraform.io/modules/operatehappy/s3-bucket) using `terraform get`.
 
-Additional usage examples are avaialble in the `examples` directory via [GitHub](https://github.com/operatehappy/terraform-aws-s3-bucket/tree/master/examples).
+Additional usage examples are available in the `examples` directory via [GitHub](https://github.com/operatehappy/terraform-aws-s3-bucket/tree/master/examples).
 
 ### Module Variables
 

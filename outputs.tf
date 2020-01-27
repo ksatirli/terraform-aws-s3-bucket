@@ -64,27 +64,27 @@ output "website_domain" {
 
 output "readme_id" {
   // `count` in `s3_bucket_object` requires the value to have an identifier
-  value       = aws_s3_bucket_object.readme[0].id
+  value       = try(aws_s3_bucket_object.readme[0].id, null)
   description = "Key of the README file"
   depends_on = [
-    aws_s3_bucket_object.readme[0]
+    aws_s3_bucket_object.readme
   ]
 }
 
 output "readme_etag" {
   // `count` in `s3_bucket_object` requires the value to have an identifier
-  value       = aws_s3_bucket_object.readme[0].etag
+  value       = try(aws_s3_bucket_object.readme[0].etag, null)
   description = "ETag of the README file"
   depends_on = [
-    aws_s3_bucket_object.readme[0]
+    aws_s3_bucket_object.readme
   ]
 }
 
 output "readme_version_id" {
   // `count` in `s3_bucket_object` requires the value to have an identifier
-  value       = aws_s3_bucket_object.readme[0].version_id
+  value       = try(aws_s3_bucket_object.readme[0].version_id, null)
   description = "Version ID of the README file"
   depends_on = [
-    aws_s3_bucket_object.readme[0]
+    aws_s3_bucket_object.readme,
   ]
 }
