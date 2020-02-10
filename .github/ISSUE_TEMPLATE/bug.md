@@ -17,7 +17,7 @@ labels: bug
 ## Steps to Reproduce
 
 <!-- Explain how to reproduce the problem -->
-<!-- If relevant, include  code, screenshots or links -->
+<!-- If relevant, include code, screenshots or links -->
 
 ## Environment
 
