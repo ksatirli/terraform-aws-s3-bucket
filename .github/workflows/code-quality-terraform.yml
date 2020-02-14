@@ -6,7 +6,7 @@ on:
   pull_request:
 
 env:
-  TERRAFORM_VERSION: 0.12.13
+  TERRAFORM_VERSION: 0.12.20
   TERRAFORM_ACTIONS_COMMENT: true
 
 jobs:
