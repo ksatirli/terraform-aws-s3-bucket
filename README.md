@@ -10,8 +10,8 @@
   - [Requirements](#requirements)
   - [Dependencies](#dependencies)
   - [Usage](#usage)
-    - [Module Variables](#module-variables)
-    - [Module Outputs](#module-outputs)
+    - [Inputs](#inputs)
+    - [Outputs](#outputs)
   - [Author Information](#author-information)
   - [License](#license)
 
@@ -52,58 +52,45 @@ Then, fetch the module from the [Terraform Registry](https://registry.terraform.
 
 Additional usage examples are available in the `examples` directory via [GitHub](https://github.com/operatehappy/terraform-aws-s3-bucket/tree/master/examples).
 
-### Module Variables
+### Inputs
 
-Available variables are listed below, along with their default values:
+| Name | Description | Type | Default |
+|------|-------------|------|---------|
+| acceleration_status | Acceleration Status of S3 Bucket | `string` | n/a |
+| name | Name of S3 Bucket | `string` | n/a |
+| policy | Policy (JSON) Document of S3 Bucket | `string` | n/a |
+| region | Region of S3 Bucket | `string` | n/a |
+| acl | Canned ACL of S3 Bucket | `string` | `"private"` |
+| cors_rule | Map of CORS Rules of S3 Bucket | `any` | `{}` |
+| create_readme | Toggle creation of `README.md` in root of S3 Bucket | `bool` | `true` |
+| force_destroy | Toggle to enable force-destruction of S3 Bucket | `bool` | `false` |
+| lifecycle_rule | Map of Lifecycle Rule configuration of S3 Bucket | `list` | `[]` |
+| logging | Map of Logging configuration of S3 Bucket | `map(string)` | `{}` |
+| object_lock_configuration | Object-lock Configuration of S3 Bucket | `any` | `{}` |
+| readme_additions | Additional content (e.g.: information, instructions) to add to README.md | `string` | `""` |
+| request_payer | Identifier for Request Cost-allocation of S3 Bucket | `string` | `"BucketOwner"` |
+| server_side_encryption_configuration | Server-side Encryption (SSE) Configuration of S3 Bucket | `map` | `{}` |
+| tags | Mapping of Tags of S3 Bucket | `map` | `{}` |
+| use_default_tags | Toggle to enable creation of default tags, containing Terraform Workspace identifier | `bool` | `true` |
+| use_prefix | Toggle to use randomly-generated Prefix for Bucket Name | `bool` | `false` |
+| versioning | Map of Versionining configuration of S3 Bucket | `map(string)` | `{}` |
+| website | Map of Website configuration of S3 Bucket | `map(string)` | `{}` |
 
-| variable                               | type          | description                                                                          | default         |
-|----------------------------------------|---------------|--------------------------------------------------------------------------------------|-----------------|
-| `name`                                 | `string`      | Name of S3 Bucket                                                                    |                 |
-| `use_prefix`                           | `bool`        | Toggle to use randomly-generated Prefix for Bucket Name                              | `false`         |
-| `acl`                                  | `string`      | Canned ACL of S3 Bucket                                                              | `"private"`     |
-| `policy`                               | `string`      | Policy (JSON) Document of S3 Bucket                                                  | `null`          |
-| `use_default_tags`                     | `bool`        | Toggle to enable creation of default tags, containing Terraform Workspace identifier | `true`          |
-| `tags`                                 | `map`         | Mapping of Tags of S3 Bucket                                                         | `{}`            |
-| `force_destroy`                        | `bool`        | Toggle to enable force-destruction of S3 Bucket                                      | `false`         |
-| `website`                              | `map(string)` | Map of Website configuration of S3 Bucket                                            | `{}`            |
-| `cors_rule`                            | `any`         | Map of CORS Rules of S3 Bucket                                                       | `{}`            |
-| `versioning`                           | `map(string)` | Map of Versionining configuration of S3 Bucket                                       | `{}`            |
-| `logging`                              | `map(string)` | Map of Logging configuration of S3 Bucket                                            | `{}`            |
-| `lifecycle_rule`                       | `list`        | Map of Lifecycle Rule configuration of S3 Bucket                                     | `[]`            |
-| `acceleration_status`                  | `string`      | Acceleration Status of S3 Bucket                                                     | `null`          |
-| `request_payer`                        | `string`      | Identifier for Request Cost-allocation of S3 Bucket                                  | `"BucketOwner"` |
-| `region`                               | `string`      | Region of S3 Bucket                                                                  | `null`          |
-| `server_side_encryption_configuration` | `map`         | Server-side Encryption (SSE) Configuration of S3 Bucket                              | `{}`            |
-| `object_lock_configuration`            | `any`         | Object-lock Configuration of S3 Bucket                                               | `{}`            |
-| `create_readme`                        | `bool`        | Toggle creation of `README.md` in root of S3 Bucket                                  | `true`          |
-| `readme_additions`                     | `string`      | Additional content (e.g.: information, instructions) to add to README.md             | `""`            |
+### Outputs
 
-Additionally, the following variables are generated as [locals](https://www.terraform.io/docs/configuration/locals.html):
-
-| key             | value                                                               |
-|-----------------|---------------------------------------------------------------------|
-| `default_tags`  | default tags containing Terraform Workspace identifier              |
-| `merged_tags`   | merged value of `var.tags` and `local.default_tags` _or_ `var.tags` |
-| `name`          | value of `var.name` or `null`                                       |
-| `bucket_prefix` | value of `var.name` or `null`                                       |
-
-### Module Outputs
-
-Available outputs are listed below, along with their description
-
-| output                        | description                                  |
-|-------------------------------|----------------------------------------------|
-| `id`                          | Name of the Bucket                           |
-| `arn`                         | ARN of the Bucket                            |
-| `bucket_domain_name`          | Domain name of the Bucket                    |
-| `bucket_regional_domain_name` | Region-specific domain name of the Bucket    |
-| `hosted_zone_id`              | Hosted Zone ID of the Bucket's Region        |
-| `region`                      | Region of the Bucket                         |
-| `website_endpoint`            | Website Endpoint of the Bucket               |
-| `website_domain`              | Domain of the Website Endpoint of the Bucket |
-| `readme_id`                   | Key of the README file                       |
-| `readme_etag`                 | ETag of the README file                      |
-| `readme_version_id`           | Version ID of the README file                |
+| Name | Description |
+|------|-------------|
+| arn | ARN of the Bucket |
+| bucket_domain_name | Domain name of the Bucket |
+| bucket_regional_domain_name | Region-specific domain name of the Bucket |
+| hosted_zone_id | Hosted Zone ID of the Bucket's Region |
+| id | Name of the Bucket |
+| readme_etag | ETag of the README file |
+| readme_id | Key of the README file |
+| readme_version_id | Version ID of the README file |
+| region | Region of the Bucket |
+| website_domain | Domain of the Website Endpoint of the Bucket |
+| website_endpoint | Website Endpoint of the Bucket |
 
 ## Author Information
 
