@@ -1,4 +1,8 @@
-# 1.1.3 (2020-02-24)
+## 1.1.4 (2020-06-11)
+
+* Updates documentation and examples (#9) ([9d3dfd7](https://github.com/operatehappy/terraform-aws-s3-bucket/commit/9d3dfd7)), closes [#9](https://github.com/operatehappy/terraform-aws-s3-bucket/issues/9)
+
+## 1.1.3 (2020-02-24)
 
 * Adds GitHub actions (#7) ([c782265](https://github.com/operatehappy/terraform-aws-s3-bucket/commit/c782265)), closes [#7](https://github.com/operatehappy/terraform-aws-s3-bucket/issues/7)
 * updates docs format (#8) ([bb9bbbd](https://github.com/operatehappy/terraform-aws-s3-bucket/commit/bb9bbbd)), closes [#8](https://github.com/operatehappy/terraform-aws-s3-bucket/issues/8)
