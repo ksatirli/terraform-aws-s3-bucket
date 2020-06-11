@@ -20,4 +20,3 @@
 * fixes URL reference to `examples` on Github (#2) ([4a85fc3](https://github.com/operatehappy/terraform-aws-s3-bucket/commit/4a85fc3)), closes [#2](https://github.com/operatehappy/terraform-aws-s3-bucket/issues/2)
 * Update to HCL 2.0 (#1) ([116a1fd](https://github.com/operatehappy/terraform-aws-s3-bucket/commit/116a1fd)), closes [#1](https://github.com/operatehappy/terraform-aws-s3-bucket/issues/1)
 * updates version in examples ([a80f6cd](https://github.com/operatehappy/terraform-aws-s3-bucket/commit/a80f6cd))
-
