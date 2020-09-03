@@ -1,4 +1,4 @@
-module "simple-example" {
+module "simple_example" {
   source  = "operatehappy/s3-bucket/aws"
   version = "1.1.4"
 

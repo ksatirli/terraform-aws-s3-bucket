@@ -19,7 +19,7 @@ For a list of installation instructions, see the [Readme document](https://regis
 A _versioning_ configuration of the `terraform-aws-s3-bucket` Module could look like this:
 
 ```hcl
-module "versioning-example" {
+module "versioning_example" {
   source  = "operatehappy/s3-bucket/aws"
   version = "1.1.4"
 

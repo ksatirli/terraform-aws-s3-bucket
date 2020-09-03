@@ -19,7 +19,7 @@ For a list of installation instructions, see the [Readme document](https://regis
 A _server-side-encryption_ configuration of the `terraform-aws-s3-bucket` Module could look like this:
 
 ```hcl
-module "server-side-encryption-example" {
+module "server_side_encryption_example" {
   source  = "operatehappy/s3-bucket/aws"
   version = "1.1.4"
 

@@ -19,7 +19,7 @@ For a list of installation instructions, see the [Readme document](https://regis
 A _simple_ configuration of the `terraform-aws-s3-bucket` Module could look like this:
 
 ```hcl
-module "simple-example" {
+module "simple_example" {
   source  = "operatehappy/s3-bucket/aws"
   version = "1.1.4"
 

@@ -19,7 +19,7 @@ For a list of installation instructions, see the [Readme document](https://regis
 An _object-lock_ configuration of the `terraform-aws-s3-bucket` Module could look like this:
 
 ```hcl
-module "object-lock-configuration-example" {
+module "object_lock_configuration_example" {
   source  = "operatehappy/s3-bucket/aws"
   version = "1.1.4"
 

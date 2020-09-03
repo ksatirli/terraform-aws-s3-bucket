@@ -32,7 +32,7 @@ This module depends on a correctly configured [AWS Provider](https://www.terrafo
 Add the module to your Terraform resources like so:
 
 ```hcl
-module "simple-example" {
+module "simple_example" {
   source  = "operatehappy/s3-bucket/aws"
   version = "1.1.4"
 
