@@ -20,7 +20,7 @@ A _complex_ configuration of the `terraform-aws-s3-bucket` Module could look lik
 
 ```hcl
 // create S3 Bucket to be used as logging target
-module "complex-example-target" {
+module "complex_example_target" {
   source  = "operatehappy/s3-bucket/aws"
   version = "1.1.4"
   name    = "oh-demos-complex-example-target"
@@ -32,7 +32,7 @@ module "complex-example-target" {
   }]
 }
 
-module "complex-example" {
+module "complex_example" {
   source  = "operatehappy/s3-bucket/aws"
   version = "1.1.4"
 
