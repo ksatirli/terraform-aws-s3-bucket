@@ -1,4 +1,8 @@
-# 1.1.4 (2020-06-11)
+# 1.2.0 (2020-09-04)
+
+* Updates Provider versions (#10) ([8efa44f](https://github.com/operatehappy/terraform-aws-s3-bucket/commit/8efa44f)), closes [#10](https://github.com/operatehappy/terraform-aws-s3-bucket/issues/10)
+
+## 1.1.4 (2020-06-11)
 
 * Updates documentation and examples (#9) ([9d3dfd7](https://github.com/operatehappy/terraform-aws-s3-bucket/commit/9d3dfd7)), closes [#9](https://github.com/operatehappy/terraform-aws-s3-bucket/issues/9)
 
