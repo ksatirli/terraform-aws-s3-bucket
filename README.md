@@ -21,7 +21,7 @@
 
 ## Requirements
 
-This module requires Terraform version `0.12.20` or newer.
+This module requires Terraform version `0.13.0` or newer.
 
 ## Dependencies
 
@@ -32,9 +32,9 @@ This module depends on a correctly configured [AWS Provider](https://www.terrafo
 Add the module to your Terraform resources like so:
 
 ```hcl
-module "simple-example" {
+module "simple_example" {
   source  = "operatehappy/s3-bucket/aws"
-  version = "1.1.4"
+  version = "1.2.0"
 
   name = "oh-demo-simple-example"
 
@@ -59,7 +59,6 @@ Additional usage examples are available in the `examples` directory via [GitHub]
 | acceleration_status | Acceleration Status of S3 Bucket | `string` | n/a |
 | name | Name of S3 Bucket | `string` | n/a |
 | policy | Policy (JSON) Document of S3 Bucket | `string` | n/a |
-| region | Region of S3 Bucket | `string` | n/a |
 | acl | Canned ACL of S3 Bucket | `string` | `"private"` |
 | cors_rule | Map of CORS Rules of S3 Bucket | `any` | `{}` |
 | create_readme | Toggle creation of `README.md` in root of S3 Bucket | `bool` | `true` |

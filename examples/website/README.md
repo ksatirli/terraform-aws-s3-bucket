@@ -19,9 +19,9 @@ For a list of installation instructions, see the [Readme document](https://regis
 A _website_ configuration of the `terraform-aws-s3-bucket` Module could look like this:
 
 ```hcl
-module "website-example" {
+module "website_example" {
   source  = "operatehappy/s3-bucket/aws"
-  version = "1.1.4"
+  version = "1.2.0"
 
   name   = "oh-demos-website-example"
 

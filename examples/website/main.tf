@@ -1,10 +1,10 @@
-module "website-example" {
+module "website_example" {
   source  = "operatehappy/s3-bucket/aws"
-  version = "1.1.4"
+  version = "1.2.0"
 
   name = "oh-demos-website-example"
 
-  website = [{
+  website = {
     index_document           = "index.html"
     error_document           = "error.html"
     routing_rules            = <<EOF
@@ -18,7 +18,7 @@ module "website-example" {
     }]
     EOF
     redirect_all_requests_to = null
-  }]
+  }
 
   cors_rule = {
     allowed_headers = ["*"]
