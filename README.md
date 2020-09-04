@@ -59,7 +59,6 @@ Additional usage examples are available in the `examples` directory via [GitHub]
 | acceleration_status | Acceleration Status of S3 Bucket | `string` | n/a |
 | name | Name of S3 Bucket | `string` | n/a |
 | policy | Policy (JSON) Document of S3 Bucket | `string` | n/a |
-| region | Region of S3 Bucket | `string` | n/a |
 | acl | Canned ACL of S3 Bucket | `string` | `"private"` |
 | cors_rule | Map of CORS Rules of S3 Bucket | `any` | `{}` |
 | create_readme | Toggle creation of `README.md` in root of S3 Bucket | `bool` | `true` |
