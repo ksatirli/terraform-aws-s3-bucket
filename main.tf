@@ -102,8 +102,6 @@ resource "aws_s3_bucket" "bucket" {
 
   acceleration_status = var.acceleration_status
 
-  region = var.region
-
   request_payer = var.request_payer
 
   // replication_configuration will be added in a future release

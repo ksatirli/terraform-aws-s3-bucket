@@ -82,12 +82,6 @@ variable "request_payer" {
   default     = "BucketOwner"
 }
 
-variable "region" {
-  type        = string
-  description = "Region of S3 Bucket"
-  default     = null
-}
-
 variable "server_side_encryption_configuration" {
   type        = map
   description = "Server-side Encryption (SSE) Configuration of S3 Bucket"
