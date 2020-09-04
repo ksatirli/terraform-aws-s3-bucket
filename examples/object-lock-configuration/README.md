@@ -21,7 +21,7 @@ An _object-lock_ configuration of the `terraform-aws-s3-bucket` Module could loo
 ```hcl
 module "object_lock_configuration_example" {
   source  = "operatehappy/s3-bucket/aws"
-  version = "1.1.4"
+  version = "1.2.0"
 
   name = "oh-demos-object-lock-configuration-example"
 

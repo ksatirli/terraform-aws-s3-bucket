@@ -22,14 +22,14 @@ A _logging_ configuration of the `terraform-aws-s3-bucket` Module could look lik
 // create S3 Bucket to be used as logging target
 module "logging_example_target" {
   source  = "operatehappy/s3-bucket/aws"
-  version = "1.1.4"
+  version = "1.2.0"
   name    = "oh-demos-logging-example-target"
   acl     = "log-delivery-write"
 }
 
 module "logging_example" {
   source  = "operatehappy/s3-bucket/aws"
-  version = "1.1.4"
+  version = "1.2.0"
 
   name = "oh-demos-logging-example"
 

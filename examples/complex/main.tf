@@ -1,6 +1,6 @@
 module "complex_example_target" {
   source  = "operatehappy/s3-bucket/aws"
-  version = "1.1.4"
+  version = "1.2.0"
   name    = "oh-demos-complex-example-target"
   acl     = "log-delivery-write"
 
@@ -12,7 +12,7 @@ module "complex_example_target" {
 
 module "complex_example" {
   source  = "operatehappy/s3-bucket/aws"
-  version = "1.1.4"
+  version = "1.2.0"
 
   name = "oh-demos-complex-example"
 

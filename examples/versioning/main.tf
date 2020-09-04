@@ -1,6 +1,6 @@
 module "versioning_example" {
   source  = "operatehappy/s3-bucket/aws"
-  version = "1.1.4"
+  version = "1.2.0"
 
   name = "oh-demos-versioning-example"
 

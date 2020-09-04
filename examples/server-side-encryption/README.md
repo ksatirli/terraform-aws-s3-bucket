@@ -21,7 +21,7 @@ A _server-side-encryption_ configuration of the `terraform-aws-s3-bucket` Module
 ```hcl
 module "server_side_encryption_example" {
   source  = "operatehappy/s3-bucket/aws"
-  version = "1.1.4"
+  version = "1.2.0"
 
   name   = "oh-demos-server-side-encryption-example"
 
